@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3DBCF9911DD8FDDD0031EA0B /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBCF9901DD8FDDD0031EA0B /* BaseTransition.swift */; };
 		3DBCF9931DD8FDEE0031EA0B /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBCF9921DD8FDEE0031EA0B /* FadeTransition.swift */; };
+		3DBCF9951DDA59410031EA0B /* LightBoxTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBCF9941DDA59410031EA0B /* LightBoxTransition.swift */; };
 		3DFC36521DD8F41E00D7F0E7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC36511DD8F41E00D7F0E7 /* PhotoViewController.swift */; };
 		42167656198E3220008CCBC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42167655198E3220008CCBC3 /* AppDelegate.swift */; };
 		4216765B198E3220008CCBC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42167659198E3220008CCBC3 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		3DBCF9901DD8FDDD0031EA0B /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		3DBCF9921DD8FDEE0031EA0B /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		3DBCF9941DDA59410031EA0B /* LightBoxTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightBoxTransition.swift; sourceTree = "<group>"; };
 		3DFC36511DD8F41E00D7F0E7 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		42167650198E3220008CCBC3 /* Facebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42167654198E3220008CCBC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				3DBCF9921DD8FDEE0031EA0B /* FadeTransition.swift */,
+				3DBCF9941DDA59410031EA0B /* LightBoxTransition.swift */,
 				3DBCF9901DD8FDDD0031EA0B /* BaseTransition.swift */,
 				42167679198ECE88008CCBC3 /* NewsFeedViewController.swift */,
 				42167677198ECE0E008CCBC3 /* RequestsViewController.swift */,
@@ -264,6 +267,7 @@
 				4216767A198ECE88008CCBC3 /* NewsFeedViewController.swift in Sources */,
 				3DBCF9931DD8FDEE0031EA0B /* FadeTransition.swift in Sources */,
 				3DFC36521DD8F41E00D7F0E7 /* PhotoViewController.swift in Sources */,
+				3DBCF9951DDA59410031EA0B /* LightBoxTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,7 @@ class NewsFeedViewController: UIViewController, UIScrollViewDelegate {
     var selectedImageView: UIImageView!
     
     var fadeTransition: FadeTransition!
+    var lightBoxTransition: LightBoxTransition!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,7 @@ class NewsFeedViewController: UIViewController, UIScrollViewDelegate {
         
         selectedImageView = sender.view as! UIImageView
         performSegue(withIdentifier: "expandPhoto", sender: nil)
-        
+    
         
     }
     
@@ -57,18 +58,32 @@ class NewsFeedViewController: UIViewController, UIScrollViewDelegate {
         //destinationViewController.image = self.imageView.image
         destinationViewController.image = selectedImageView.image
         
-        
         // Set the modal presentation style of your destinationViewController to be custom.
         destinationViewController.modalPresentationStyle = UIModalPresentationStyle.custom
         
         // Create a new instance of your fadeTransition.
         fadeTransition = FadeTransition()
+        //lightBoxTransition = LightBoxTransition()
         
         // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
         destinationViewController.transitioningDelegate = fadeTransition
         
         // Adjust the transition duration. (seconds)
         fadeTransition.duration = 1.0
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            let window = UIApplication.shared.keyWindow
+            let frame = window!.convert(self.selectedImageView.frame, from: destinationViewController.imageView)
+            window!.addSubview(self.selectedImageView)
+            self.selectedImageView.frame = CGRect(x: 0, y: 0, width: 300, height: 420)
+            
+        }) { (Bool) in
+            UIView.animate(withDuration: 0.5, animations: {
+                //self.selectedImageView.removeFromSuperview()
+                self.selectedImageView.alpha = 0
+            })
+        }
+
         
         
     }

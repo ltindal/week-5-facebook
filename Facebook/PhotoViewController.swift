@@ -54,7 +54,13 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
             dismiss(animated: true, completion: nil)
         }
         }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        self.photoBar.alpha = 1
+        self.doneButton.alpha = 1
+        return imageView
         
+    }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         UIView.animate(withDuration: 0.3) {
@@ -63,8 +69,6 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         }
 
     }
-
-
     
     @IBAction func didPressDone(_ sender: AnyObject) {
         
